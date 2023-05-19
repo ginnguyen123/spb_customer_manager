@@ -1,0 +1,101 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<th:block th:fragment="modal_edit_customer">
+  <div class="modal fade" id="modalEditCustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit customer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="frmEditCustomer" method="post">
+            <div class="row g-3">
+              <section>
+                <div class="wrapper active">
+                  <div class="image-preview-edit">
+                    <canvas id="canvasEdit" style="display: none;"></canvas>
+                  </div>
+<!--                  <div class="content">-->
+<!--                    <div class="icon">-->
+<!--                      <i class="fas fa-cloud-upload-alt"></i>-->
+<!--                    </div>-->
+<!--                    <div class="text">-->
+<!--                        No file chosen, yet!-->
+<!--                    </div>-->
+<!--                    <div class="text">-->
+<!--                        Max file size = 2MB-->
+<!--                    </div>-->
+<!--                  </div>-->
+                  <div class="clear-image-preview">
+                    <i class="fas fa-times"></i>
+                  </div>
+                  <div class="file-name">
+                    Change image
+                  </div>
+                </div>
+                <input type="file" id="imageFileEdit" accept="image/jpeg, image/png" hidden="">
+              </section>
+            </div>
+            <div class="row g-3">
+              <div class="col-18">
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>Full name</label>
+                  <input type="text" class="form-control" id="fullNameEdit" style=" width: 250px">
+                </div>
+
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>Date of birth</label>
+                  <input type="date" class="form-control" id="dateOfBirthEdit" style=" width: 250px">
+                </div>
+
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>Phone number</label>
+                  <input type="tel" class="form-control" id="phoneEdit" style=" width: 248px">
+                </div>
+
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>Email</label>
+                  <input type="email" class="form-control" id="emailEdit" style=" width: 250px">
+                </div>
+
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>Province</label>
+                  <select type="text" class="form-control" id="provinceEdit" style=" width: 250px">
+                    <option selected disabled>Select province</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>District</label>
+                  <select type="text" class="form-control" id="districtEdit" style=" width: 248px">
+                    <option selected disabled>Select district</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>Ward</label>
+                  <select type="text" class="form-control" id="wardEdit" style=" width: 250px">
+                    <option selected disabled>Select ward</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="float: left; margin: 0px 5px;">
+                  <label>Address</label>
+                  <input type="text" class="form-control" id="addressEdit" style=" width: 508px">
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="btnSaveEditCustomer" class="btn btn-primary">Save change</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</th:block>

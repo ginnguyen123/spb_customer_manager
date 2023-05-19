@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Page blank</title>
+        <th:block th:replace="layout/head"/>
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <th:block th:replace="layout/topbar"/>
+            <!-- Top Bar End -->
+            <!-- ========== Left Sidebar Start ========== -->
+            <th:block th:replace="layout/left-side-menu"/>
+            <!-- Left Sidebar End -->
+            <!-- Start right Content here -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="">
+                        <div class="page-header-title">
+                            <h4 class="page-title">Blank Page</h4>
+                        </div>
+                    </div>
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="m-t-0">Your Title</h4>
+
+                                            <div style="height: 300px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row -->
+
+                        </div><!-- container-fluid -->
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+<!--                <footer class="footer">-->
+<!--                    © 2016 - 2018 Appzia - All Rights Reserved.-->
+<!--                </footer>-->
+            </div>
+            <!-- End Right content here -->
+        </div>
+        <!-- END wrapper -->
+        <!-- jQuery  -->
+        <th:block th:replace="layout/script"/>
+    </body>
+</html>
